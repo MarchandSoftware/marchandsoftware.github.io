@@ -1,0 +1,28 @@
+# ============================================
+# MarchandSoftware Website - Git Ignore
+# ============================================
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Build directories
+bin/
+obj/
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
