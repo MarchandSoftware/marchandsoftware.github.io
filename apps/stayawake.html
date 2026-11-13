@@ -11,6 +11,7 @@
 </head>
 <body>
   <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="../index.html#home" aria-label="MarchandSoftware — naar home">
@@ -25,14 +26,15 @@
       </nav>
     </div>
   </header>
+
   <main id="inhoud">
     <section class="app-hero" aria-labelledby="app-title">
       <div class="container app-hero-inner">
         <div class="breadcrumbs"><a href="../index.html#applicaties">Applicaties</a> &nbsp;›&nbsp; StayAwake</div>
         <div class="app-heading">
-            <div class="app-symbol">
-                <img src="../images/StayAwake.png" alt="StayAwake logo">
-            </div>
+          <div class="app-symbol">
+            <img src="../images/StayAwake.png" alt="StayAwake-logo">
+          </div>
           <div>
             <p class="eyebrow">WINDOWS · PRODUCTIVITEIT</p>
             <h1 id="app-title">Stay<span>Awake</span></h1>
@@ -46,6 +48,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Eerste inhoudsblok: tekst en informatiepaneel naast elkaar. -->
     <div class="container app-main">
       <div class="app-layout">
         <div>
@@ -54,25 +58,18 @@
             <p>Soms wil je voorkomen dat Windows automatisch in slaapstand gaat. Bijvoorbeeld wanneer je een langdurige taak uitvoert, iets wilt volgen op je scherm of tijdelijk de standaardinstellingen voor energiebeheer wilt omzeilen.</p>
             <p>StayAwake is daarvoor een eenvoudige oplossing. Je start de applicatie en bedient haar vanuit het pictogram in het Windows-systeemvak, zonder dat er voortdurend een venster open hoeft te staan.</p>
           </section>
+
           <section class="app-section" aria-labelledby="features">
             <h2 id="features">Kenmerken</h2>
             <ul class="feature-list">
-              <li>Voorkomt dat je pc automatisch in slaapstand gaat zolang de tool actief is.</li>
+              <li>Voorkomt dat je pc automatisch in slaapstand gaat zolang een awake-stand actief is.</li>
               <li>Compacte bediening vanuit het Windows-systeemvak.</li>
               <li>Portable: geen installatieprocedure nodig.</li>
               <li>Zelfstandige Windows x64-applicatie: geen aparte .NET-installatie vereist.</li>
             </ul>
           </section>
-          <section class="app-section" aria-labelledby="install">
-            <h2 id="install">Downloaden en gebruiken</h2>
-            <ol class="install-steps">
-              <li>Download de nieuwste versie via de knop hierboven.</li>
-              <li>Pak <strong>StayAwake-win-x64.zip</strong> uit in een map naar keuze.</li>
-              <li>Start <strong>StayAwake.Tray.exe</strong> en gebruik het pictogram in het systeemvak.</li>
-            </ol>
-            <div class="notice"><strong>Windows SmartScreen:</strong> bij de eerste start kan Windows waarschuwen voor een onbekende uitgever. StayAwake wordt momenteel zonder commerciële digitale ondertekening aangeboden. Controleer altijd of je de applicatie van de officiële MarchandSoftware-releasepagina hebt gedownload.</div>
-          </section>
         </div>
+
         <aside class="detail-panel" aria-labelledby="details">
           <h2 id="details">In één oogopslag</h2>
           <div class="detail-row"><span>Platform</span><strong>Windows 10 / 11</strong></div>
@@ -84,7 +81,52 @@
         </aside>
       </div>
     </div>
+
+    <!-- Eigen sectie over de volledige breedte, buiten .app-layout. -->
+    <section class="section section-tinted" id="handleiding" aria-labelledby="handleiding-title">
+      <div class="container">
+        <p class="eyebrow">ZO WERKT HET</p>
+        <h2 id="handleiding-title">Gebruiksaanwijzing</h2>
+        <p class="section-copy">StayAwake werkt vanuit het Windows-systeemvak. Na het starten van <strong>StayAwake.Tray.exe</strong> verschijnt het pictogram rechtsonder naast de klok (soms achter het pijltje voor verborgen pictogrammen). Klik met de rechtermuisknop op het pictogram om het menu te openen. StayAwake start standaard in <strong>Normal mode</strong>.</p>
+
+        <h3>Beschikbare standen</h3>
+        <div class="card-grid">
+          <article class="card">
+            <h3>System awake</h3>
+            <p>Voorkomt dat Windows automatisch in slaapstand gaat. Het beeldscherm mag wel uitschakelen volgens de normale energie-instellingen.</p>
+          </article>
+          <article class="card">
+            <h3>Display awake</h3>
+            <p>Houdt zowel de computer als het beeldscherm actief. Handig tijdens presentaties of wanneer informatie langdurig zichtbaar moet blijven.</p>
+          </article>
+          <article class="card">
+            <h3>Normal mode</h3>
+            <p>Schakelt de StayAwake-functionaliteit uit. Windows volgt weer de normale energie-instellingen. Dit is de standaardstand bij het starten.</p>
+          </article>
+        </div>
+
+        <h3>Bediening</h3>
+        <p>Kies de gewenste stand via het menu. De actieve stand herken je aan het vinkje. Je kunt op ieder moment van stand wisselen.</p>
+        <h3>Afsluiten</h3>
+        <p>Klik met de rechtermuisknop op het StayAwake-pictogram en selecteer <strong>Exit</strong>. StayAwake heft de actieve awake-instelling op en sluit af.</p>
+        <div class="notice">StayAwake voorkomt automatische slaapstand door inactiviteit, maar niet wanneer je Windows zelf handmatig in slaapstand zet of afsluit.</div>
+      </div>
+    </section>
+
+    <!-- Downloadinstructies in een eigen, reguliere sectie. -->
+    <section class="section" aria-labelledby="install">
+      <div class="container">
+        <h2 id="install">Downloaden en gebruiken</h2>
+        <ol class="install-steps">
+          <li>Download de nieuwste versie via de knop bovenaan deze pagina.</li>
+          <li>Pak <strong>StayAwake-win-x64.zip</strong> uit in een map naar keuze.</li>
+          <li>Start <strong>StayAwake.Tray.exe</strong> en gebruik het pictogram in het systeemvak.</li>
+        </ol>
+        <div class="notice"><strong>Windows SmartScreen:</strong> bij de eerste start kan Windows waarschuwen voor een onbekende uitgever. StayAwake wordt momenteel zonder commerciële digitale ondertekening aangeboden. Controleer altijd of je de applicatie van de officiële MarchandSoftware-releasepagina hebt gedownload.</div>
+      </div>
+    </section>
   </main>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <span>© 2026 MarchandSoftware</span>
