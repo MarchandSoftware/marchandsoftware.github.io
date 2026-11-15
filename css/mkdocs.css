@@ -1,0 +1,96 @@
+/* MarchandSoftware — MkDocs (default 'mkdocs' theme) */
+:root {
+  --ms-navy: #102d4c;
+  --ms-navy-deep: #0c223c;
+  --ms-blue: #1664a8;
+  --ms-cyan: #24b4d6;
+  --ms-text: #253a50;
+  --ms-muted: #63768a;
+  --ms-border: #dfe8ef;
+  --ms-light: #f4f8fc;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: var(--ms-text);
+  background: #fff;
+  line-height: 1.65;
+}
+
+/* Header: dezelfde donkerblauwe gradient als de applicatiepagina's. */
+.navbar,
+.navbar.bg-primary,
+.navbar.bg-dark {
+  background: linear-gradient(120deg, #0b2542 0%, #133b63 63%, #155789 100%) !important;
+  border: 0;
+}
+.navbar .navbar-brand { font-weight: 750; letter-spacing: -.4px; }
+.navbar .navbar-brand,
+.navbar .nav-link { color: #fff; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus { color: #9cdef3; }
+
+/* Inhoud en koppen */
+[role="main"] h1,
+[role="main"] h2,
+[role="main"] h3,
+.col-md-9 h1,
+.col-md-9 h2,
+.col-md-9 h3 {
+  color: var(--ms-navy-deep);
+  letter-spacing: -.4px;
+  line-height: 1.25;
+}
+[role="main"] h1, .col-md-9 h1 {
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--ms-border);
+}
+[role="main"] a, .col-md-9 a { color: var(--ms-blue); }
+[role="main"] a:hover, .col-md-9 a:hover { color: #0b477e; }
+
+/* Linker navigatie en inhoudsopgave */
+.bs-sidebar,
+[role="navigation"] .nav {
+  border-radius: 10px;
+}
+.bs-sidebar .nav > li > a,
+.bs-sidebar .nav-link { color: var(--ms-text); }
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav-link:hover { color: var(--ms-blue); background: var(--ms-light); }
+.bs-sidebar .active > a,
+.bs-sidebar .nav-link.active {
+  color: var(--ms-blue) !important;
+  font-weight: 700;
+  border-left: 3px solid var(--ms-cyan);
+}
+
+/* Code, tabellen en citaten */
+pre, .highlight pre {
+  background: var(--ms-light);
+  border: 1px solid var(--ms-border);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+code { color: #175c91; }
+pre code { color: var(--ms-text); }
+blockquote {
+  padding: 12px 18px;
+  background: #ecf5fa;
+  border-left: 4px solid #2796be;
+  border-radius: 6px;
+  color: #234861;
+}
+table:not(.highlighttable) { width: 100%; border-collapse: collapse; }
+table:not(.highlighttable) th,
+table:not(.highlighttable) td { border: 1px solid var(--ms-border); padding: 9px 12px; }
+table:not(.highlighttable) th { background: var(--ms-light); color: var(--ms-navy); }
+
+/* Toegankelijkheid */
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--ms-cyan);
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  [role="main"] h1, .col-md-9 h1 { font-size: 1.9rem; }
+  pre { overflow-x: auto; }
+}
