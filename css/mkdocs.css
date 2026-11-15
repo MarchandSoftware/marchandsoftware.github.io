@@ -1,4 +1,4 @@
-/* MarchandSoftware — MkDocs (default 'mkdocs' theme) */
+/* MarchandSoftware | Centrale stijl voor MkDocs (standaardthema) */
 :root {
   --ms-navy: #102d4c;
   --ms-navy-deep: #0c223c;
@@ -10,30 +10,61 @@
   --ms-light: #f4f8fc;
 }
 
+html, body {
+  background: #fff !important;
+}
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
   color: var(--ms-text);
-  background: #fff;
   line-height: 1.65;
+  background-image: none !important;
 }
 
-/* Header: dezelfde donkerblauwe gradient als de applicatiepagina's. */
+/* Witte navigatie, zoals op de hoofdsite. */
 .navbar,
 .navbar.bg-primary,
-.navbar.bg-dark {
-  background: linear-gradient(120deg, #0b2542 0%, #133b63 63%, #155789 100%) !important;
+.navbar.bg-dark,
+.navbar.navbar-default {
+  background: #fff !important;
+  background-image: none !important;
   border: 0;
+  border-bottom: 1px solid #e7edf3;
+  box-shadow: none;
 }
-.navbar .navbar-brand { font-weight: 750; letter-spacing: -.4px; }
-.navbar .navbar-brand,
-.navbar .nav-link { color: #fff; }
+.navbar .navbar-brand {
+  color: var(--ms-navy-deep) !important;
+  font-weight: 750;
+  letter-spacing: -.4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar .navbar-brand::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  background: url('https://marchandsoftware.nl/images/MarchandSoftware_Icon.png') center / contain no-repeat;
+}
+.navbar .nav-link,
+.navbar .navbar-nav > li > a,
+.navbar .navbar-text,
+.navbar .navbar-toggler {
+  color: #40576d !important;
+}
 .navbar .nav-link:hover,
-.navbar .nav-link:focus { color: #9cdef3; }
+.navbar .nav-link:focus,
+.navbar .navbar-nav > li > a:hover {
+  color: var(--ms-blue) !important;
+}
+.navbar .navbar-toggler { border-color: var(--ms-border); }
+.navbar .navbar-toggler-icon { filter: invert(.65); }
 
-/* Inhoud en koppen */
-[role="main"] h1,
-[role="main"] h2,
-[role="main"] h3,
+/* Pagina-indeling en koppen. */
+[role='main'] h1,
+[role='main'] h2,
+[role='main'] h3,
 .col-md-9 h1,
 .col-md-9 h2,
 .col-md-9 h3 {
@@ -41,22 +72,22 @@ body {
   letter-spacing: -.4px;
   line-height: 1.25;
 }
-[role="main"] h1, .col-md-9 h1 {
+[role='main'] h1,
+.col-md-9 h1 {
   padding-bottom: .5rem;
   border-bottom: 2px solid var(--ms-border);
 }
-[role="main"] a, .col-md-9 a { color: var(--ms-blue); }
-[role="main"] a:hover, .col-md-9 a:hover { color: #0b477e; }
+[role='main'] a,
+.col-md-9 a { color: var(--ms-blue); }
+[role='main'] a:hover,
+.col-md-9 a:hover { color: #0b477e; }
 
-/* Linker navigatie en inhoudsopgave */
-.bs-sidebar,
-[role="navigation"] .nav {
-  border-radius: 10px;
-}
+/* Zijbalk. */
+.bs-sidebar { border-radius: 10px; background: var(--ms-light); }
 .bs-sidebar .nav > li > a,
 .bs-sidebar .nav-link { color: var(--ms-text); }
 .bs-sidebar .nav > li > a:hover,
-.bs-sidebar .nav-link:hover { color: var(--ms-blue); background: var(--ms-light); }
+.bs-sidebar .nav-link:hover { color: var(--ms-blue); background: #e9f5fb; }
 .bs-sidebar .active > a,
 .bs-sidebar .nav-link.active {
   color: var(--ms-blue) !important;
@@ -64,7 +95,7 @@ body {
   border-left: 3px solid var(--ms-cyan);
 }
 
-/* Code, tabellen en citaten */
+/* Code, tabellen en opmerkingen. */
 pre, .highlight pre {
   background: var(--ms-light);
   border: 1px solid var(--ms-border);
@@ -85,12 +116,15 @@ table:not(.highlighttable) th,
 table:not(.highlighttable) td { border: 1px solid var(--ms-border); padding: 9px 12px; }
 table:not(.highlighttable) th { background: var(--ms-light); color: var(--ms-navy); }
 
-/* Toegankelijkheid */
+/* Footer: copyright komt uit de MkDocs-configuratie. */
+footer, .footer { background: #f9fbfd; color: var(--ms-muted); border-top: 1px solid var(--ms-border); }
+footer a, .footer a { color: var(--ms-blue); }
+
 a:focus-visible, button:focus-visible {
   outline: 3px solid var(--ms-cyan);
   outline-offset: 3px;
 }
 @media (max-width: 767px) {
-  [role="main"] h1, .col-md-9 h1 { font-size: 1.9rem; }
+  [role='main'] h1, .col-md-9 h1 { font-size: 1.9rem; }
   pre { overflow-x: auto; }
 }
